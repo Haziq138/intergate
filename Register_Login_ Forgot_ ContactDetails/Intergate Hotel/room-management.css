@@ -1,0 +1,283 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: maroon;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.admin-sidebar h2 {
+    margin: 0;
+    font-size: 28px;
+    color: white;
+}
+
+.admin-sidebar p {
+    margin: 8px 0 30px;
+    color: white;
+}
+
+.admin-sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.4);
+    margin-bottom: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.admin-sidebar a i {
+    margin-right: 10px;
+}
+
+.admin-sidebar a:hover,
+.admin-sidebar a.active {
+    background-color: white;
+    color: maroon;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 35px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.page-header h1 {
+    color: maroon;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.message-box {
+    display: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.message-success {
+    display: block;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.message-error {
+    display: block;
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.search-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.search-card input,
+.search-card select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    min-width: 220px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.search-card button {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.reset-btn {
+    background-color: #555 !important;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-card h3,
+.table-card h3 {
+    color: maroon;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-row textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+.upload-area {
+    width: 100%;
+}
+
+.upload-label {
+    display: block;
+    font-weight: bold;
+    color: maroon;
+    margin-bottom: 8px;
+}
+
+.upload-area input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+    background: white;
+    box-sizing: border-box;
+}
+
+.image-preview-box {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background: #fafafa;
+}
+
+.image-preview-box img {
+    max-width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+.save-btn,
+.cancel-btn {
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.save-btn {
+    background-color: maroon;
+}
+
+.cancel-btn {
+    background-color: #777;
+    margin-left: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: maroon;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.room-thumb {
+    width: 80px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .admin-sidebar {
+        width: 220px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        padding: 20px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}

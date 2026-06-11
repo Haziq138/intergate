@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="menu-icon" onclick="openSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <a href="home.html" class="hotel-logo">Intergate Hotel</a>
+
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+</div>
+
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a href="home.html#homeSection">Home</a>
+    <a href="home.html#roomsSection">Rooms</a>
+    <a href="home.html#facilitiesSection">Facilities</a>
+    <a href="home.html#locationSection">Location</a>
+    <a href="history.html">Booking History</a>
+    <a href="profile.html">Profile</a>
+</div>
+
+<div class="container">
+    <div class="paper">
+        <h2><i class="fas fa-hotel"></i> ROOM BOOKING FORM</h2>
+        <div class="form-sub">Fill in your booking details</div>
+
+        <form id="bookingForm">
+            <div class="form-grid">
+
+                <label><i class="fas fa-bed"></i> Room</label>
+                <select id="roomSelect" required>
+                    <option value="">Select Room</option>
+                </select>
+
+                <label><i class="fas fa-tag"></i> Room Type</label>
+                <input type="text" id="roomType" readonly>
+
+                <label><i class="fas fa-money-bill"></i> Room Price Per Night</label>
+                <input type="number" id="roomPrice" readonly>
+
+                <label><i class="fas fa-calendar-check"></i> Check-In Date</label>
+                <input type="date" id="checkInDate" required>
+
+                <label><i class="fas fa-calendar-day"></i> Check-Out Date</label>
+                <input type="date" id="checkOutDate" required>
+
+                <label><i class="fas fa-moon"></i> Number of Nights</label>
+                <input type="number" id="numberOfNights" readonly>
+
+                <label><i class="fas fa-users"></i> Number of Guests</label>
+                <input type="number" id="numberOfGuests" placeholder="Enter number of guests" min="1" required>
+
+                <label><i class="fas fa-calculator"></i> Total Price</label>
+                <input type="number" id="totalPrice" readonly>
+
+                <div class="price-note">
+                    <i class="fas fa-info-circle"></i>
+                    Total price will be calculated based on room price and number of nights.
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-arrow-right"></i> Continue to Payment
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function openSidebar() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeSidebar() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+
+<script type="module" src="js/booking.js"></script>
+<script src="js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Confirmation Page</title>
+    <link rel="stylesheet" href="bookconfirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="menu-icon" onclick="openSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <a href="home.html" class="hotel-logo">Intergate Hotel</a>
+
+        <a href="#" class="logout-btn" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="home.html#homeSection">Home</a>
+        <a href="home.html#roomsSection">Rooms</a>
+        <a href="home.html#facilitiesSection">Facilities</a>
+        <a href="home.html#locationSection">Location</a>
+        <a href="history.html">Booking History</a>
+    <a href="profile.html">Profile</a>      <a href="profile.html">Profile</a>
+    </div>
+
+    <div class="paper">
+        <h2><i class="fas fa-check-circle"></i> Booking Confirmation</h2>
+
+        <div class="summary-card">
+            <h3><i class="fas fa-receipt"></i> Booking Summary</h3>
+
+            <div class="detail-row">
+                <p><strong>Booking ID:</strong></p>
+                <p id="displayBookingID">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong><i class="fas fa-bed"></i> Room:</strong></p>
+                <p id="displayRoom">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong>Room Type:</strong></p>
+                <p id="displayRoomType">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong><i class="fas fa-calendar-check"></i> Check-In:</strong></p>
+                <p id="displayCheckin">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong><i class="fas fa-calendar-day"></i> Check-Out:</strong></p>
+                <p id="displayCheckout">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong><i class="fas fa-moon"></i> Nights:</strong></p>
+                <p id="displayNights">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong><i class="fas fa-users"></i> Guests:</strong></p>
+                <p id="displayGuests">--</p>
+            </div>
+
+            <div class="detail-row total-row">
+                <p><strong><i class="fas fa-money-bill"></i> Total Payment:</strong></p>
+                <p id="displayTotal">RM 0</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong>Booking Status:</strong></p>
+                <p id="bookingStatus" class="status-badge">--</p>
+            </div>
+        </div>
+
+        <div class="payment-info">
+            <h4><i class="fas fa-credit-card"></i> Payment Details</h4>
+
+            <div class="detail-row">
+                <p><strong>Payment Method:</strong></p>
+                <p id="paymentMethod">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong>Payment Status:</strong></p>
+                <p id="paymentStatus" class="status-badge">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong>Payment ID:</strong></p>
+                <p id="transactionId">--</p>
+            </div>
+
+            <div class="detail-row">
+                <p><strong>Payment Date:</strong></p>
+                <p id="paymentDate">--</p>
+            </div>
+        </div>
+
+        <div class="confirmation-message">
+            <i class="fas fa-check-circle"></i>
+            <p>Your booking has been submitted successfully!</p>
+            <p class="small-text">Please check your booking and payment status in Booking History.</p>
+        </div>
+
+        <div class="button-group">
+            <a href="history.html">
+    <button class="btn-primary">
+        <i class="fas fa-clock"></i> View Booking History
+    </button>
+</a>
+
+            <a href="home.html">
+                <button class="btn-secondary">
+                    <i class="fas fa-home"></i> Back to Home
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+
+    <script type="module" src="js/bookconfirmation.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+</html>

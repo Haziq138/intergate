@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+            <div class="navbar">
+    <div class="menu-icon" onclick="openSidebar()">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <a href="home.html" class="hotel-logo">Intergate Hotel</a>
+
+    <a href="#" id="logoutBtn" class="logout-btn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+</div>
+            
+<div id="sidebar" class="sidebar" style="background-color: maroon;">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    <a href="home.html#homeSection">Home</a>
+    <a href="home.html#roomsSection">Rooms</a>
+    <a href="home.html#facilitiesSection">Facilities</a>
+    <a href="home.html#locationSection">Location</a>
+    <a href="history.html">Booking History</a>
+    <a href="profile.html">Profile</a>
+</div>
+    
+            <script>
+                function openSidebar() {
+                    document.getElementById("sidebar").style.width = "250px";
+                }
+
+                function closeSidebar() {
+                    document.getElementById("sidebar").style.width = "0";
+                }
+            </script>
+     </head>
+
+     <br><br><br><br><br>
+
+        <body>
+           <div class="paper">
+           <div class="profile-header">
+               <i class='fas fa-user-circle' style='font-size:48px;color:maroon'></i><br><br>
+
+               <h1> user profile </h1>
+          <div class="profile-info">
+          <div class="info-row">
+            <i class="fas fa-user"></i>
+            <span class="label">Name: </span>
+            <span class="value" id="profileName">-</span>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-envelope"></i>
+            <span class="label">Email :</span>
+            <span class="value" id="profileEmail">-</span>
+          </div>
+
+          <div class="info-row">
+            <i class="fas fa-phone"></i>
+            <span class="label">Phone:</span>
+            <span class="value" id="profilePhone">-</span>
+          </div>
+
+          <br><br>
+
+        <div class="profile-button">
+            <button type="button" class="edit-btn" onclick="window.location.href='contactdetails.html'">Edit Profile</button>
+            <button type="button" class="password-btn" onclick="window.location.href='change-password.html'">Change Password</button>
+        </div>       
+               
+               </div>
+          </div>
+          <script type="module" src="js/profile.js"></script>
+          <script src="js/logout.js"></script>
+        </body>
+
+</html>

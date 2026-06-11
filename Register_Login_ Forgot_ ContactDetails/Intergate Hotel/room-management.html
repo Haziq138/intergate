@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Room Management</title>
+    <link rel="stylesheet" href="room-management.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-sidebar">
+    <h2>Intergate Hotel</h2>
+    <p>Admin Panel</p>
+
+ <a href="admin-dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+<a href="room-management.html" class="active"><i class="fas fa-bed"></i> Room Management</a>
+<a href="customer-management.html"><i class="fas fa-users"></i> Customer Management</a>
+<a href="booking-overview.html"><i class="fas fa-list"></i> Booking Overview</a>
+<a href="report.html"><i class="fas fa-chart-bar"></i> Reports</a>
+<a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<div class="main-content">
+
+    <div class="page-header">
+        <h1><i class="fas fa-bed"></i> Room Management</h1>
+        <p>Add, view, update, delete, search and filter room records.</p>
+    </div>
+
+    <div id="messageBox" class="message-box"></div>
+
+    <div class="search-card">
+        <input type="text" id="roomSearch" placeholder="Search room name or type">
+
+        <select id="roomFilter">
+            <option value="all">All Status</option>
+            <option value="Available">Available</option>
+            <option value="Unavailable">Unavailable</option>
+            <option value="Occupied">Occupied</option>
+            <option value="On Maintenance">On Maintenance</option>
+        </select>
+
+        <button id="searchBtn">
+            <i class="fas fa-search"></i> Search
+        </button>
+
+        <button id="resetBtn" class="reset-btn">
+            Reset
+        </button>
+    </div>
+
+    <div class="form-card">
+        <h3 id="formTitle">Add Room Form</h3>
+
+        <form id="roomForm">
+            <input type="hidden" id="editRoomDocID">
+
+            <div class="form-row">
+                <input type="text" id="roomName" placeholder="Room Name" required>
+                <input type="text" id="roomType" placeholder="Room Type" required>
+                <input type="number" id="roomPrice" placeholder="Price" required>
+
+                <select id="roomStatus" required>
+                    <option value="">Select Status</option>
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                    <option value="Occupied">Occupied</option>
+                    <option value="On Maintenance">On Maintenance</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="upload-area">
+                    <label class="upload-label">Upload Room Image</label>
+                    <input type="file" id="roomImage" accept="image/*">
+
+                    <div id="imagePreviewBox" class="image-preview-box">
+                        <p>No image selected</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <textarea id="roomDescription" placeholder="Room Description" required></textarea>
+            </div>
+
+            <button type="submit" class="save-btn" id="saveRoomBtn">
+                <i class="fas fa-save"></i> Save Room
+            </button>
+
+            <button type="button" class="cancel-btn" id="cancelEditBtn" style="display:none;">
+                Cancel Edit
+            </button>
+        </form>
+    </div>
+
+    <div class="table-card">
+        <h3>Room Records Table</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Room ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="roomTableBody">
+                <tr>
+                    <td colspan="9">Loading room records...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script type="module" src="js/room-management.js"></script>
+<script src="js/logout.js"></script>
+
+</body>
+</html>

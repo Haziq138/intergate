@@ -1,0 +1,258 @@
+.search-bar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-bar select {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            background-color: maroon;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+     .paper{
+        background-color:aliceblue;
+        height: 280px;
+        width: 1700px;
+        margin: auto;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: left;
+        box-shadow: 0px 0px 10px white;
+        min-width:350px;
+        flex-shrink:0;
+    }
+
+ .navbar {
+    background-color: maroon;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo{
+    color:white;
+    font-size:23px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+
+.room-detail-card {
+    background-color: white;
+    width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.room-detail-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+.status-badge.available {
+    background-color: #198754;
+}
+
+.status-badge.unavailable {
+    background-color: #dc3545;
+}
+
+.room-status {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.status-available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-unavailable {
+    background-color: #eeeeee;
+    color: #555;
+}
+
+.status-occupied {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status-maintenance {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: maroon;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.hotel-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.hotel-logo:hover {
+    color: #f5d6d6;
+    text-decoration: none;
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #8B0000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.logout-btn i {
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #660000;
+    color: white;
+}
+
+/* SIDEBAR */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: maroon;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 200;
+}
+
+.sidebar a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: antiquewhite;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: white;
+    color: maroon;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+}
+
+/* ROOM STATUS BADGE DESIGN */
+.status-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-badge.status-available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.status-unavailable {
+    background-color: #eeeeee;
+    color: #555;
+}
+
+.status-badge.status-occupied {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.status-badge.status-maintenance {
+    background-color: #fff3cd;
+    color: #856404;
+}

@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* NAVBAR - SAME AS HOME PAGE */
+.navbar {
+    background-color: maroon;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.hotel-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.hotel-logo:hover {
+    color: #f5d6d6;
+    text-decoration: none;
+}
+
+.logout-btn {
+    color: white;
+    text-decoration: none;
+    background-color: #8B0000;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.logout-btn i {
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #660000;
+    color: white;
+}
+
+/* SIDEBAR - SAME AS HOME PAGE */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: maroon;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 200;
+}
+
+.sidebar a {
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: antiquewhite;
+    display: block;
+    transition: 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: white;
+    color: maroon;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+}
+/* BOOKING FORM */
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.paper {
+    background-color: maroon;
+    border-radius: 16px;
+    padding: 35px 40px;
+    color: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.paper h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    letter-spacing: 2px;
+}
+
+.form-sub {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.paper label {
+    display: block;
+    margin: 15px 0 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.paper input,
+.paper select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    color: #333;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.paper input:focus,
+.paper select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.price-note {
+    background: rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px;
+    margin: 20px 0;
+    font-size: 13px;
+    line-height: 1.4;
+    border-left: 3px solid #ffc107;
+}
+
+.price-note i {
+    margin-right: 6px;
+    color: #ffc107;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: white;
+    color: maroon;
+    border: none;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.submit-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.01);
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .hotel-logo {
+        font-size: 22px;
+    }
+
+    .logout-btn {
+        font-size: 14px;
+        padding: 7px 12px;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+
+    .paper {
+        padding: 25px;
+    }
+
+    .paper h2 {
+        font-size: 22px;
+    }
+}

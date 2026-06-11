@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergate Hotel - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin-sidebar">
+    <h2>Intergate Hotel</h2>
+    <p>Admin Panel</p>
+
+    <a href="admin-dashboard.html" class="active">
+        <i class="fas fa-home"></i> Dashboard
+    </a>
+
+    <a href="room-management.html">
+        <i class="fas fa-bed"></i> Room Management
+    </a>
+
+    <a href="customer-management.html">
+        <i class="fas fa-users"></i> Customer Management
+    </a>
+
+    <a href="booking-overview.html">
+        <i class="fas fa-list"></i> Booking Overview
+    </a>
+
+    <a href="report.html">
+        <i class="fas fa-chart-bar"></i> Reports
+    </a>
+
+    <a href="#" id="logoutBtn">
+        <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+</div>
+
+<div class="main-content">
+
+    <div class="hero">
+        <h1>Welcome Admin</h1>
+        <p>Admin dashboard overview for Intergate Hotel Booking System.</p>
+    </div>
+
+    <div id="dashboardMessage" class="message-box"></div>
+
+    <div class="cards">
+
+        <div class="card">
+            <i class="fas fa-bed"></i>
+            <h3>Total Rooms</h3>
+            <h2 id="totalRooms">0</h2>
+            <p>Rooms registered in the system.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Total Customers</h3>
+            <h2 id="totalCustomers">0</h2>
+            <p>Customer accounts in the system.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-calendar-check"></i>
+            <h3>Total Bookings</h3>
+            <h2 id="totalBookings">0</h2>
+            <p>Total booking records created.</p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-money-bill-wave"></i>
+            <h3>Total Payments</h3>
+            <h2 id="totalPayments">0</h2>
+            <p>Total payment records received.</p>
+        </div>
+
+    </div>
+
+    <div class="quick-actions">
+        <h2>Quick Actions</h2>
+
+        <div class="cards">
+
+            <a href="room-management.html" class="card action-card">
+                <i class="fas fa-bed"></i>
+                <h3>Manage Rooms</h3>
+                <p>Add, update, delete and view room records.</p>
+            </a>
+
+            <a href="customer-management.html" class="card action-card">
+                <i class="fas fa-users"></i>
+                <h3>Manage Customers</h3>
+                <p>View, update, delete and filter customer records.</p>
+            </a>
+
+            <a href="booking-overview.html" class="card action-card">
+                <i class="fas fa-list"></i>
+                <h3>View Bookings</h3>
+                <p>Monitor all customer booking records.</p>
+            </a>
+
+            <a href="report.html" class="card action-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>View Reports</h3>
+                <p>Review booking and payment reports.</p>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="table-box">
+        <h2>Latest Booking Records</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Customer</th>
+                    <th>Room</th>
+                    <th>Total</th>
+                    <th>Booking Status</th>
+                    <th>Payment Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="latestBookingTableBody">
+                <tr>
+                    <td colspan="6">Loading latest booking records...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script type="module" src="js/admin-dashboard.js"></script>
+<script src="js/logout.js"></script>
+
+</body>
+</html>
