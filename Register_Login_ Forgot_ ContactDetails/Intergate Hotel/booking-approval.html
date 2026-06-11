@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking List</title>
+
+    <link rel="stylesheet" href="staff.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>Intergate Hotel</h2>
+        <p class="panel-title">Staff Panel</p>
+
+        <a href="staff-dashboard.html">
+            <i class="fas fa-home"></i> Dashboard
+        </a>
+
+        <a href="booking-approval.html" class="active">
+            <i class="fas fa-list"></i> Booking List
+        </a>
+
+        <a href="payment-verification.html">
+            <i class="fas fa-credit-card"></i> Payment Verification
+        </a>
+
+        <a href="#" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+
+    <div class="main">
+
+        <div class="page-title">
+            <h1>Booking List</h1>
+<p>View customer bookings and update booking status.</p>        </div>
+
+       <div class="filter-box">
+    <input type="text" id="bookingSearchInput" placeholder="Search by booking ID, customer, or room">
+
+    <button type="button" id="bookingSearchBtn" class="search-btn">
+        <i class="fas fa-search"></i> Search
+    </button>
+
+    <select id="bookingStatusFilter">
+        <option value="all">All Status</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+        <option value="cancelled">Cancelled</option>
+        <option value="completed">Completed</option>
+    </select>
+</div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer</th>
+                        <th>Room</th>
+                        <th>Check In</th>
+                        <th>Check Out</th>
+                        <th>Total</th>
+                        <th>Booking Status</th>
+                        <th>Payment Status</th>
+                        <th>Update Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="bookingListContainer">
+                    <tr>
+                        <td colspan="10" class="empty-row">Loading booking records...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+<div id="checkTimeModal" class="checktime-modal">
+    <div class="checktime-modal-content">
+        <span class="close-modal" id="closeCheckTimeModal">&times;</span>
+
+        <h2>Update Customer Check In / Check Out</h2>
+
+        <input type="hidden" id="checkTimeDocID">
+
+        <p><strong>Booking ID:</strong> <span id="modalBookingID">--</span></p>
+        <p><strong>Customer:</strong> <span id="modalCustomerName">--</span></p>
+        <p><strong>Room:</strong> <span id="modalRoomName">--</span></p>
+
+        <div class="modal-row">
+            <label>Check In Date</label>
+            <input type="date" id="modalCheckInDate">
+        </div>
+
+        <div class="modal-row">
+            <label>Check In Time</label>
+            <input type="time" id="modalCheckInTime">
+        </div>
+
+        <div class="modal-row">
+            <label>Check Out Date</label>
+            <input type="date" id="modalCheckOutDate">
+        </div>
+
+        <div class="modal-row">
+            <label>Check Out Time</label>
+            <input type="time" id="modalCheckOutTime">
+        </div>
+
+        <button id="saveCheckTimeBtn" class="save-checktime-btn">
+            Save Check In/Out
+        </button>
+
+        <button id="cancelCheckTimeBtn" class="cancel-checktime-btn">
+            Cancel
+        </button>
+    </div>
+</div>
+
+    <script type="module" src="js/booking-approval.js"></script>
+    <script src="js/logout.js"></script>
+
+</body>
+</html>
